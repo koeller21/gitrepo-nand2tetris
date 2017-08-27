@@ -14,4 +14,10 @@ CHIP Inc16 {
 
     PARTS:
    // Put you code here:
+   Not16(in=in, out=o1);
+   And16(a=in, b=o1, out=o2);
+   Not16(in=o2, out=o3);
+   Not16(in=in, out=in1);
+   Add16(a=in1, b=o3, out=o4);
+   Not16(in=o4, out=out);
 }
